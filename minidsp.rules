@@ -1,0 +1,7 @@
+# miniDSP: voice control solutions
+# https://www.minidsp.com/
+# Put this file into /usr/lib/udev/rules.d
+
+# miniDSP UMA-8
+SUBSYSTEM=="usb", ATTR{idVendor}=="2752", ATTR{idProduct}=="001c", MODE="0660", GROUP="plugdev", TAG+="uaccess", TAG+="udev-acl", SYMLINK+="minidsp%n"
+KERNEL=="hidraw*", ATTRS{idVendor}=="2752", ATTRS{idProduct}=="001c",  MODE="0660", GROUP="plugdev", TAG+="uaccess", TAG+="udev-acl"

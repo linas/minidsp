@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="minidsp" type="run.py" name="minidsp" output="screen">
+        <param name="rate_hz" value="10" />
+    </node>
+</launch>
